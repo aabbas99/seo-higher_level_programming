@@ -12,8 +12,19 @@ class Square:
     Attributes:
         __size: The size of the square
     """
-
     def __init__(self, size=0):
+        """ Initliaze a new Square.
+
+        Args:
+            size(int) the size of the new square. Default is 0.
+        Raises:
+            TypeError: If size is not an integer.
+            ValueError: If size is less than zeo.
+        """
+        self.size = size
+
+    @size.setter
+    def size(self, size):
         """
         Initalize a new Square.
 
@@ -28,10 +39,17 @@ class Square:
         elif size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-
+    
+    @property
     def area(self):
         """
         Returns the area of a square in type int
         """
 
         return self.__size ** 2
+
+    def size(self):
+        """
+        Get size of self
+        """
+        return self.__size
