@@ -23,6 +23,12 @@ class Square:
         """
         self.size = size
 
+    @property
+    def size(self):
+        """Get the current size of square"""
+        return (self.__size)
+
+
     @size.setter
     def size(self, size):
         """
@@ -46,10 +52,3 @@ class Square:
         """
 
         return self.__size ** 2
-
-    @property
-    def size(self):
-        """
-        Get size of self
-        """
-        return (self.__size)
